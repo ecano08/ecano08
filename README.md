@@ -1,80 +1,97 @@
-<!--
-Optional future banner:
-[![Elia Cano Banner](./assets/banner.png)](https://github.com/ecano08)
--->
-
-<h1 align="center">Hi, I'm Elia Cano 👋</h1>
-
-<h3 align="center">
-Software Engineer · Applied AI · Full-Stack Development
-</h3>
+<!-- Profile Banner -->
+<p align="center">
+  <a href="https://github.com/ecano08">
+    <img src="./assets/banner.png" alt="Elia Cano — Software Engineer · Applied AI · Full-Stack" width="100%" />
+  </a>
+</p>
 
 <p align="center">
-I build operational software and AI-powered systems using modern web technologies,
-LLMs, APIs, deterministic business logic, and human-in-the-loop workflows.
+  <strong>Software Engineer · Applied AI · Full-Stack Development</strong>
+</p>
+
+<p align="center">
+  I build operational software and AI-powered systems that connect
+  business logic, APIs, data, LLMs, and real-world workflows.
 </p>
 
 <p align="center">
   <a href="https://github.com/ecano08">
-    <img src="https://img.shields.io/badge/GitHub-ecano08-181717?style=for-the-badge&logo=github" />
+    <img src="https://img.shields.io/badge/GitHub-ecano08-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   <a href="https://github.com/ecano08/ai-logistics-copilot">
-    <img src="https://img.shields.io/badge/Featured_Project-AI_Logistics_Copilot-412991?style=for-the-badge&logo=openai&logoColor=white" />
+    <img src="https://img.shields.io/badge/Featured_Project-AI_Logistics_Copilot-412991?style=for-the-badge&logo=openai&logoColor=white" alt="AI Logistics Copilot" />
   </a>
 </p>
 
 ---
 
-## 👨‍💻 About Me
+## 👋 About Me
 
-I'm a software developer focused on building practical systems that solve real operational problems.
+I'm a Software Engineer with a background in full-stack and backend development, focused on building practical systems that solve real operational problems.
 
-My background is primarily in full-stack and backend development, and I'm currently expanding that experience into production-oriented AI systems.
+My work combines traditional software engineering with Applied AI, especially systems where LLMs need to interact safely with APIs, databases, business rules, external services, and human decision-making.
 
-I enjoy working on the intersection of:
+I enjoy working at the intersection of:
 
-- 🧠 Applied AI and LLM integration
-- ⚙️ Backend systems and business logic
-- 🌐 Full-stack web applications
-- 🔌 APIs and external integrations
-- 🗄️ Data and PostgreSQL
+- 🧠 Applied AI and LLM-powered systems
+- ⚙️ Backend architecture and business logic
+- 🌐 Full-stack applications
+- 🔌 APIs and third-party integrations
+- 🗄️ Relational data and PostgreSQL
 - 🐳 Dockerized environments
 - 🔁 CI/CD and automated testing
-- 🛡️ AI safety and human approval workflows
+- 🛡️ AI safety, evaluations, and human-in-the-loop workflows
 
-My current focus is learning how to build AI systems that are useful in real operations — not just chatbots.
+My current focus is building **production-oriented AI systems — not just chatbots**.
 
 ---
 
-## 🚀 Featured Project
+# 🚀 Featured Project
 
-### [AI Logistics Copilot](https://github.com/ecano08/ai-logistics-copilot)
+## [AI Logistics Copilot](https://github.com/ecano08/ai-logistics-copilot)
 
-An AI-powered logistics operations copilot designed to explore how LLMs can safely interact with operational systems.
+> AI-powered logistics operations copilot built around safe LLM integration, deterministic business logic, controlled tools, and human approval.
 
-The system combines:
+### Architecture
 
 ```text
-React + TypeScript
-        ↓
-Node.js + TypeScript API
-        ↓
-PostgreSQL
+                ┌─────────────────────────┐
+                │   React + TypeScript    │
+                │     Operations UI       │
+                └────────────┬────────────┘
+                             │
+                             ▼
+                ┌─────────────────────────┐
+                │ Node.js + TypeScript API│
+                │    Logistics Domain     │
+                └───────┬─────────┬───────┘
+                        │         │
+                        │         └──────────► Open-Meteo
+                        │
+                        ▼
+                ┌─────────────────────────┐
+                │       PostgreSQL        │
+                │    Operational Data     │
+                └─────────────────────────┘
 
-        +
-
-Python + FastAPI
-        ↓
-OpenAI / LLM Tool Calling
-        ↓
-Operational Tools
-        ↓
-Deterministic Risk Engine
-        ↓
-Human Approval
+                             │
+                             ▼
+                ┌─────────────────────────┐
+                │   Python + FastAPI      │
+                │       AI Service        │
+                ├─────────────────────────┤
+                │ LLM Tool Calling        │
+                │ Risk Engine             │
+                │ Human Approval          │
+                │ Evals & Safety          │
+                │ Observability           │
+                └────────────┬────────────┘
+                             │
+                             ▼
+                       OpenAI API
 ```
 
-### Key capabilities
+### What it demonstrates
 
 - LLM Tool Calling
 - Multi-step AI workflows
@@ -85,63 +102,72 @@ Human Approval
 - Structured operational recommendations
 - Human-in-the-loop escalation proposals
 - AI safety evaluations
+- Controlled agent behavior
 - Structured observability
+- PostgreSQL-backed operational data
 - Docker Compose environment
 - Automated testing
 - GitHub Actions CI
 
-### Example workflow
+### Example AI workflow
 
 ```text
 Operator asks about SHP-1010
         ↓
-LLM resolves shipment
+LLM resolves the shipment
         ↓
 Operational data is retrieved
         ↓
-Risk engine evaluates shipment
+Deterministic risk engine evaluates:
+status + ETA + events + weather
         ↓
 HIGH risk / Score 90
         ↓
-AI explains the result
+LLM explains the result
         ↓
 Escalation is proposed
         ↓
-Human approval required
+Human approval is required
 ```
 
-The main design principle is:
+### Core design principle
 
-> AI can investigate, reason, recommend, and prepare actions — but critical operational decisions remain controlled by deterministic software and humans.
+> **AI can investigate, reason, recommend, and prepare actions — but business-critical decisions remain controlled by deterministic software and humans.**
 
-[View AI Logistics Copilot →](https://github.com/ecano08/ai-logistics-copilot)
+<p align="center">
+  <a href="https://github.com/ecano08/ai-logistics-copilot">
+    <img src="https://img.shields.io/badge/View_Project-AI_Logistics_Copilot-181717?style=for-the-badge&logo=github&logoColor=white" alt="View AI Logistics Copilot" />
+  </a>
+</p>
 
 ---
 
-## 🧠 Applied AI
+# 🧠 Applied AI Engineering
 
-Technologies and patterns I'm currently working with:
+I'm working with patterns used to move LLM applications beyond basic prompt/response interfaces:
 
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
-- LLM integration
-- Tool / function calling
-- Structured outputs
-- Agent workflows
-- Deterministic AI guardrails
-- Human-in-the-loop systems
-- AI evaluations
-- Safety checks
-- Observability
-- External API integration
+```text
+LLM Integration
+Tool / Function Calling
+Structured Outputs
+Multi-step Workflows
+Deterministic Guardrails
+Human-in-the-Loop
+AI Evaluations
+Safety Checks
+Observability
+External API Integration
+```
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -149,7 +175,7 @@ Technologies and patterns I'm currently working with:
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-### Backend
+## Backend
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
@@ -158,12 +184,12 @@ Technologies and patterns I'm currently working with:
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 
-### Data
+## Data
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-### Infrastructure & Tools
+## Infrastructure & Tooling
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
@@ -173,67 +199,87 @@ Technologies and patterns I'm currently working with:
 
 ---
 
-## 🏗️ What I Like Building
+# 🏗️ How I Approach Engineering
+
+I like building systems from the business problem outward:
 
 ```text
-Business problem
+Business Problem
       ↓
-Software architecture
+Discovery & Requirements
       ↓
-APIs + data
+Software Architecture
       ↓
-Business rules
+APIs + Data
       ↓
-AI where it adds value
+Business Rules
       ↓
-Testing + safety
+AI Where It Adds Value
       ↓
-Real operational workflow
+Testing + Safety
+      ↓
+Observability
+      ↓
+Real Operational Workflow
 ```
 
-I'm particularly interested in systems where AI has to work with existing software, APIs, databases, users, and real business constraints.
+I'm particularly interested in systems where AI needs to work with **existing software, APIs, databases, users, and real business constraints**.
 
 ---
 
-## 🔭 Current Focus
+# 🔭 Current Focus
 
 I'm currently deepening my experience in:
 
-- Applied AI engineering
-- LLM-based operational systems
+- Applied AI Engineering
+- LLM-powered operational systems
 - Python + FastAPI
 - Node.js + TypeScript
 - React + TypeScript
-- Tool calling
+- Tool Calling
 - Agentic workflows
 - AI evaluations
+- AI safety
 - Observability
 - Docker
 - Cloud architecture
-- Forward Deployed Engineering patterns
+- Forward Deployed Engineering
 
 ---
 
-## 📌 Selected Work
+# 💡 Engineering Philosophy
 
-### 🤖 AI Logistics Copilot
+For business-critical AI systems, I prefer:
 
-**Applied AI / Logistics / Operations**
+```text
+           LLM Reasoning
+                +
+          Controlled Tools
+                +
+     Deterministic Business Logic
+                +
+           External APIs
+                +
+               Data
+                +
+              Tests
+                +
+        Human Approval
+                +
+         Observability
+```
 
-`React` `TypeScript` `Node.js` `Python` `FastAPI` `PostgreSQL` `OpenAI` `Docker`
-
-A portfolio project demonstrating safe integration between LLMs and operational software.
-
-[View repository →](https://github.com/ecano08/ai-logistics-copilot)
+rather than giving an LLM unrestricted control over operational systems.
 
 ---
 
-## 📊 GitHub
+# 📊 GitHub
 
 <p align="center">
   <img
     height="170"
     src="https://github-readme-stats.vercel.app/api?username=ecano08&show_icons=true&hide_border=true&rank_icon=github"
+    alt="Elia Cano GitHub Stats"
   />
 </p>
 
@@ -241,52 +287,31 @@ A portfolio project demonstrating safe integration between LLMs and operational 
   <img
     height="170"
     src="https://github-readme-stats.vercel.app/api/top-langs/?username=ecano08&layout=compact&hide_border=true"
+    alt="Elia Cano Top Languages"
   />
 </p>
 
 ---
 
-## 💡 Engineering Philosophy
+# 🤝 Let's Connect
 
-I prefer building AI systems where:
+I'm interested in engineering opportunities involving:
 
-```text
-LLM reasoning
-+
-controlled tools
-+
-deterministic business logic
-+
-external APIs
-+
-tests
-+
-human approval
-+
-observability
-```
+- **Applied AI**
+- **AI Engineering**
+- **Forward Deployed Engineering**
+- **Backend Engineering**
+- **Full-Stack Engineering**
+- **AI-enabled operational systems**
 
-rather than giving an LLM unrestricted control over business operations.
-
----
-
-## 🤝 Let's Connect
-
-I'm interested in software engineering opportunities involving:
-
-- Applied AI
-- AI Engineering
-- Forward Deployed Engineering
-- Backend Engineering
-- Full-Stack Engineering
-- AI-enabled operational systems
-
-You can explore my work here on GitHub:
-
-👉 **[github.com/ecano08](https://github.com/ecano08)**
+<p align="center">
+  <a href="https://github.com/ecano08">
+    <img src="https://img.shields.io/badge/Explore_My_Work-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
+  </a>
+</p>
 
 ---
 
 <p align="center">
-  <b>Building software that connects business logic, real-world operations, and AI.</b>
+  <strong>Building software that connects business logic, real-world operations, and AI.</strong>
 </p>

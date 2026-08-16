@@ -273,26 +273,6 @@ rather than giving an LLM unrestricted control over operational systems.
 
 ---
 
-# 📊 GitHub
-
-<p align="center">
-  <img
-    height="170"
-    src="https://github-readme-stats.vercel.app/api?username=ecano08&show_icons=true&hide_border=true&rank_icon=github"
-    alt="Elia Cano GitHub Stats"
-  />
-</p>
-
-<p align="center">
-  <img
-    height="170"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=ecano08&layout=compact&hide_border=true"
-    alt="Elia Cano Top Languages"
-  />
-</p>
-
----
-
 # 🤝 Let's Connect
 
 I'm interested in engineering opportunities involving:
